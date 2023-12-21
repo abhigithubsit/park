@@ -29,14 +29,6 @@ app.post('/getAddress', async (req, res) => {
     }
 });
 
-// app.get('/send-data', (req, res) => {
-//     // Your data to be sent
-//     const data = { message: Addr };
-
-//     // Send the data as a JSON response
-//     res.json(data);
-//   });
-
 // Route to get nearby locations
 app.post("/nearby", async (req, res) => {
     try {
@@ -62,9 +54,6 @@ app.post("/nearby", async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
-
-
 
 module.exports = Addr;
 

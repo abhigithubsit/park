@@ -47,7 +47,6 @@ function Location() {
   function getRandomNumber() {
     // Generate a random number between 0 (inclusive) and 51 (exclusive)
     return Math.floor(Math.random() * 51);
-    // return 0
   }
 
   const showErrorToast = (message) => {
@@ -117,7 +116,7 @@ function Location() {
 
   const handleGetNearbyLocations = async () => {
     const apiUrl = `https://atlas.mappls.com/api/places/nearby/json?keywords=vehicle parking&refLocation=${latitude},${longitude}&region=IND&sortBy=dist:asc`;
-    const bearerToken = '02222d98-e86a-4b48-9f91-a0e9bcdfefa0'; // Replace with your actual Bearer token
+    const bearerToken = '99ef2638-8ad4-47d3-90c0-3b81cbe9ea90'; // Replace with your actual Bearer token
 
     try {
       const response = await fetch('http://localhost:5000/nearby', {
@@ -176,7 +175,6 @@ function Location() {
                     size="sm"
                     onClick={() => bookSlot(location)}
                     // Disable the button if the randomSlotNumber is zero
-                    // isDisabled={getRandomNumber() === 0}     
                   >
                     Book Slot
                   </Button>:<Button
@@ -184,7 +182,6 @@ function Location() {
                     size="sm"
                     onClick={() => console.log("dont book")}
                     // Disable the button if the randomSlotNumber is zero
-                    // isDisabled={getRandomNumber() === 0}     
                   >
                     Not Available
                   </Button>}
