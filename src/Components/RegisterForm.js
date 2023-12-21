@@ -20,10 +20,12 @@ export default function Form() {
       setIsLoading(true); // Set isLoading to true when submitting
 
       const res = await axios.post('http://localhost:5000/allocate-slot', formData);
-      console.log('Response:', res);
+      // console.log('Response:', res);
 
       // Send a POST request to your backend endpoint
       const response = await axios.post('http://localhost:5000/slot-booking', formData);
+      console.log(response)
+      
 
       // Handle the response if needed
       if (response.status === 201) {

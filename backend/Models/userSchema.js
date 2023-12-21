@@ -16,13 +16,11 @@ const userSchema = new Schema({
             validator: validateVehicleNumber,
             message: 'Invalid Indian vehicle number format',
         },
-        unique: true,
 
     },
     email: {
         type: String,
         required: true,
-        unique: true,
     },
 });
 
